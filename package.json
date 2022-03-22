@@ -1,0 +1,29 @@
+{
+  "name": "github-rep-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/app.js",
+  "scripts": {
+    "dev": "nodemon src/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IagoSCandido/github-rep-api.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IagoSCandido/github-rep-api/issues"
+  },
+  "homepage": "https://github.com/IagoSCandido/github-rep-api#readme",
+  "dependencies": {
+    "express": "^4.17.3",
+    "nodemon": "^2.0.15",
+    "sequelize": "^6.17.0",
+    "sqlite": "^4.0.25",
+    "sqlite3": "^5.0.2"
+  },
+  "type": "module"
+}
