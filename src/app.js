@@ -1,2 +1,3 @@
 import app from './express.js';
-import openDb from './configDB.js';
+import axios from "axios";
+import sequelize from './dabatase.js';

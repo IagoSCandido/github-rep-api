@@ -1,10 +1,10 @@
-CREATE TABLE github_user (
-    id BIGSERIAL NOT NULL UNIQUE,
-	owner_login SMALLINT NOT NULL UNIQUE,
-	avatar_url VARCHAR(150) NOT NULL,
-	"name" VARCHAR(100) NOT NULL,
-	description VARCHAR(255),
-	visibility BOOLEAN NOT NULL DEFAULT TRUE,
-	default_branch VARCHAR(100) NOT NULL,
-	"size" SMALLINT NOT NULL
+CREATE TABLE "user" (
+    id INTEGER NOT NULL UNIQUE,
+	owner_login TEXT NOT NULL,
+	avatar_url TEXT NOT NULL,
+	"name" TEXT NOT NULL,
+	"description" TEXT,
+	visibility INTEGER NOT NULL DEFAULT 1,
+	default_branch TEXT NOT NULL,
+	"size" INTEGER NOT NULL
 );
