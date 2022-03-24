@@ -4,7 +4,8 @@ const sequelize = new Sequelize({
     dialect: 'sqlite',
     storage: './sql/database.sqlite'
   });
-  sequelize
+  
+sequelize
   .authenticate()
   .then(() => {
     console.log('Connection has been established successfully.');

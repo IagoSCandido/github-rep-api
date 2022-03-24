@@ -1,9 +1,8 @@
 //TODO resolver o erro "TypeError: Sequelize.define is not a function";
-import Sequelize, { BIGINT, STRING, INTEGER } from 'sequelize';
-import DataTypes from 'sqlite3';
+import { BIGINT, STRING, INTEGER } from 'sequelize';
+import sequelize from '../database.js'
 
-
-const user = Sequelize.define ('user', {
+const user = sequelize.define('user', {
     id: {
         type: BIGINT,
         primaryKey: true,
@@ -18,11 +17,11 @@ const user = Sequelize.define ('user', {
         type: STRING,
         allowNull: false 
     },
-    "name": {
+    name: {
         type: STRING,
         allowNull: false
     },
-    "description": {
+    description: {
         type: STRING,
         allowNull:false
     },
@@ -35,7 +34,7 @@ const user = Sequelize.define ('user', {
         type: STRING,
         allowNull:false
     },
-    "size": {
+    size: {
         type: BIGINT,
         allowNull:false
     }
