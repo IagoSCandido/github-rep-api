@@ -1,9 +1,11 @@
 import Sequelize from 'sequelize'
+import { user } from './models/index.js'
 const sequelize = new Sequelize({
     dialect: 'sqlite',
     storage: './sql/database.sqlite'
   });
-  sequelize
+  
+sequelize
   .authenticate()
   .then(() => {
     console.log('Connection has been established successfully.');

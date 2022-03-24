@@ -1,39 +1,43 @@
-import sequelize from 'Sequelize';
+//TODO resolver o erro "TypeError: Sequelize.define is not a function";
+import { BIGINT, STRING, INTEGER } from 'sequelize';
+import sequelize from '../database.js'
 
 const user = sequelize.define('user', {
     id: {
-        type: DataTypes.INTEGER,
+        type: BIGINT,
         primaryKey: true,
         autoIncrement: true,
         allowNull: false
     },
     owner_login: {
-        type: DataTypes.TEXT,
+        type: STRING,
         allowNull: false
     },
     avatar_url: {
-        type: DataTypes.TEXT,
+        type: STRING,
         allowNull: false 
     },
-    "name": {
-        type:DataTypes.TEXT,
+    name: {
+        type: STRING,
         allowNull: false
     },
     description: {
-        type: DataTypes.TEXT,
+        type: STRING,
         allowNull:false
     },
     visibility: {
-        type:DataTypes.INTEGER,
+        type: INTEGER,
         allowNull: false,
         default:1
     },
     default_branch: {
-        type:DataTypes.TEXT,
+        type: STRING,
         allowNull:false
     },
-    "size": {
-        type:DataTypes.INTEGER,
+    size: {
+        type: BIGINT,
         allowNull:false
     }
 })
+
+export default user;
